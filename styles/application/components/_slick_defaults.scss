@@ -1,0 +1,206 @@
+// main: ../../../css/styles.scss
+
+.slider-helper {
+    overflow: hidden;
+}
+
+.ss-container {
+    position: relative;
+    padding : 0 30px;
+    @media (min-width: 90em) {
+        padding: 0;
+    }
+}
+
+.slick-slider {
+    position: relative;
+
+    &.allow-for-dots {
+        padding-bottom: 70px;
+    }
+
+    .slick-slide {
+      opacity: 0;
+      @include transition(.2s, 0s);
+      &.slick-active {
+        opacity: 1;
+      }
+    }
+
+
+
+    .slick-dots {
+        position  : absolute;
+        bottom    : 0;
+        width     : 100%;
+        margin    : 0 !important;
+        padding   : 10px 0;
+        display   : block;
+        @include transition(.4s, 0s);
+        list-style: none;
+        text-align: center;
+
+        li {
+            display       : inline-block;
+            width         : 50px;
+            height        : 50px;
+            vertical-align: top;
+            margin        : 0;
+            @include transition(.4s, 0s);
+
+            button {
+                width           : 50px;
+                height          : 50px;
+                padding         : 0;
+                background-color: transparent;
+                outline         : none;
+                border          : none;
+                font-size       : 0;
+                cursor          : pointer;
+
+                &:before {
+                    font-family: 'Font Awesome 5 Pro';
+                    content    : '\f111';
+                    font-size  : 15px;
+                    font-weight: 900;
+                    line-height: 50px;
+                    width      : 50px;
+                    height     : 50px;
+                    color      : $primary-color;
+                    opacity    : 1;
+                }
+            }
+
+            &.slick-active {
+                button:before {
+                    color      : darken($primary-color, 10%);
+                    content    : '\f111';
+                    font-weight: 300;
+                    opacity    : 1;
+                }
+            }
+        }
+    }
+
+    .slick-next,
+    .slick-prev {
+        position         : absolute;
+        width            : 50px;
+        height           : 70px;
+        -webkit-transform: translate(0,-50%);
+        -ms-transform    : translate(0,-50%);
+        transform        : translate(0,-50%);
+        z-index          : 999;
+        top              : calc(50% - 30px);
+        font-size        : 0;
+        background-color : transparent;
+        border           : none;
+        outline          : none;
+        cursor           : pointer;
+
+        &:before {
+            font-family            : 'Font Awesome 5 Pro';
+            font-size              : 25px;
+            font-weight            : 900;
+            line-height            : 70px;
+            height                 : 70px;
+            width                  : 50px;
+            line-height            : 1;
+            opacity                : 1;
+            -webkit-font-smoothing : antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            color                  : $primary-color;
+        }
+
+        &.slick-disabled:before {
+            opacity: .2;
+        }
+    }
+
+    &.allow-for-dots {
+        .slick-next,
+        .slick-prev {
+            top: calc(50% - 35px;);
+        }
+    }
+
+    .slick-next {
+      right: -45px;
+      @media (min-width: 1520px) {
+        right: -60px;
+      }
+
+
+        &:before {
+            content: '\f054';
+        }
+    }
+
+    .slick-prev {
+      left: -45px;
+      @media (min-width: 1520px) {
+        left: -60px;
+      }
+
+        &:before {
+            content: '\f053';
+        }
+    }
+
+    &.ss-three-dots {
+        .slick-dots-container {
+            width   : 100%;
+            overflow: hidden;
+            display : block;
+            padding : 0;
+            height  : 70px;
+            margin  : 0 auto;
+
+            .inner-wrap {
+                width   : 150px;
+                overflow: hidden;
+                margin  : 0 auto;
+
+                .slick-dots {
+                    position: relative;
+                    bottom  : auto;
+                    width   : auto;
+                    display : flex;
+
+                    li {
+                        &.n-small-1,
+                        &.p-small-1 {
+                            transform: scale(0.6);
+                        }
+
+                        &.slick-active {
+                            transform: scale(1);
+                        }
+                    }
+                }
+            }
+        }
+
+        .slick-next,
+        .slick-prev {
+            top              : auto;
+            bottom           : 0;
+            -webkit-transform: translate(0,0);
+            -ms-transform    : translate(0,0);
+            transform        : translate(0,0);
+
+            &:before {
+                font-weight: 900;
+                font-size  : 26px;
+            }
+        }
+
+        .slick-next {
+            right: 0;
+        }
+
+        .slick-prev {
+            left: 0;
+        }
+    }
+}

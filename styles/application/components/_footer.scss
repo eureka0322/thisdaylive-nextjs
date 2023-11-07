@@ -1,0 +1,136 @@
+// main: ../../../css/styles.scss
+
+#site_footer {
+    background-color: $primary-color;
+    color           : #fff;
+    padding         : 0;
+    position        : relative;
+
+    .pill {
+        span {
+            background-color: rgba(255,255,255,0);
+            border          : 1px solid $primary-color;
+            color           : $primary-color;
+
+            span {
+                color           : rgba(255,255,255,1);
+                background-color: $primary-color;
+                border          : 1px solid $primary-color;
+            }
+
+            i {
+                color: #fff;
+            }
+        }
+
+        &:hover {
+            span {
+                background-color: $primary-color;
+                color           : rgba(255,255,255,1);
+
+                span {
+                    border: 1px solid #fff;
+                }
+            }
+        }
+    }
+
+    .this-day-logo {
+        max-width: 200px !important;
+    }
+
+    h6 {
+        color: #fff;
+    }
+
+    .title {
+      color: #fff;
+      font-size: 1.8rem !important;
+      a {
+        color: inherit;
+      }
+    }
+
+    p {
+        font-size    : 1.3rem;
+        margin-bottom: 1rem;
+        font-weight  : 400;
+        color        : rgba(255,255,255,0.7);
+
+        a {
+            color: #fff;
+        }
+    }
+
+    ul {
+        margin    : 0;
+        list-style: none !important;
+
+        li {
+            margin-bottom: 0;
+            font-size    : 1.3rem;
+
+            &:last-child {
+                border-bottom : 0;
+                margin-bottom : 0;
+                padding-bottom: 0;
+            }
+
+            a {
+                font-weight: 400;
+                color      : #fff;
+            }
+
+            &:hover {
+                a {}
+
+                &:before {
+                    margin-right: 7px;
+                }
+            }
+        }
+    }
+
+    .footer-widget {
+        margin-bottom: 30px;
+        padding-right: 20px;
+
+        article {
+            border: none !important;
+
+            .post-meta {
+                .category {
+                    a {
+                        color: #fff;
+                    }
+                }
+            }
+
+            .article-image {
+                flex: 25% 1 0;
+            }
+
+            .article-content {
+                flex : 75% 0 0;
+                color: #fff;
+                padding: 0 0 0 10px !important;
+                h2 {
+                  color: inherit;
+                  a {
+                    color: inherit;
+                  }
+                }
+            }
+        }
+    }
+}
+
+#copyright {
+    background-color: $secondary-color;
+    color           : #fff;
+    text-align      : center;
+
+    p {
+        font-size: 1.3rem;
+    }
+}

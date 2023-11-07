@@ -1,0 +1,280 @@
+// main: ../../../css/styles.scss
+
+h1.article-title {
+    font-family: 'Oswald', sans-serif;
+    font-size  : 5.5rem;
+    line-height: 6rem;
+}
+
+.post-date {
+    .date-container {
+        i {
+            color: $accent-color;
+        }
+    }
+}
+
+.post-meta {
+    font-size: 1.2rem !important;
+
+    .category {
+        a {
+            text-transform : uppercase;
+            font-weight    : bold;
+            color          : $primary-color;
+            text-decoration: none !important;
+        }
+    }
+}
+
+article {
+    position       : relative;
+    display        : flex;
+    flex-flow      : column;
+    align-items    : flex-start;
+    margin-bottom  : 10px;
+    padding-bottom: 10px;
+    justify-content: stretch;
+    border-bottom: 1px solid var(--grey-10-color);
+
+    .article-image {
+        flex : 100% 1 0;
+        width: 100%;
+
+        &.medium {
+            position  : relative;
+            align-self: stretch;
+            overflow  : hidden;
+            min-height: 175px;
+
+            img {
+                width   : 100%;
+                height  : auto;
+                position: absolute;
+            }
+        }
+    }
+
+    .article-content {
+        flex      : 100% 0 0;
+        box-sizing: border-box;
+        padding   : 0 0 0 10px;
+        width     : 100%;
+
+        h2 {
+            margin            : 0 0 7px !important;
+            text-transform    : capitalize !important;
+            //overflow          : hidden;
+            //text-overflow     : ellipsis;
+            //display           : -webkit-box;
+            //-webkit-line-clamp: 2;
+            /* number of lines to show */
+            //line-clamp        : 2;
+            //-webkit-box-orient: vertical;
+            font-weight: 700 !important;
+
+            a {
+                color          : inherit;
+                text-decoration: none !important;
+            }
+        }
+
+        .post-meta {
+            font-size: 1.1rem !important;
+            margin   : 0 !important;
+        }
+    }
+
+    &.vertical {
+        .article-image {
+            position  : relative;
+            align-self: stretch;
+            overflow  : hidden;
+
+            a {
+                display : block;
+                width   : 100%;
+                height  : 175px;
+                overflow: hidden;
+                position: relative;
+
+                img {
+                    width   : 100%;
+                    height  : auto;
+                    position: absolute;
+                }
+            }
+        }
+
+        .article-content {
+            padding: 10px 0 0;
+        }
+    }
+
+    &.horizontal {
+        flex-flow: row;
+
+        .article-image {
+            flex         : 25% 0 0;
+            margin-bottom: 0;
+        }
+
+        .article-content {
+            flex: 75% 0 0;
+            padding-right: 30px;
+        }
+
+        &.no-img {
+            .article-image {
+                display: none;
+            }
+    
+            .article-content {
+                flex: 100% 0 0;
+                padding-left: 0;
+            }
+        }
+    }
+
+    &.small-text-only {
+        .article-content {
+            flex   : 100% 0 0;
+            padding: 0;
+        }
+    }
+
+    &.featured {
+        position           : relative;
+        height             : auto;
+        @media (min-width: 60em) {
+            height: 100%;
+        }
+        width              : 100%;
+        background-position: center center;
+        background-size    : cover;
+
+        &:before {
+            content   : '';
+            position  : absolute;
+            top       : 0;
+            left      : 0;
+            right     : 0;
+            bottom    : 0;
+            /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.44+100 */
+            background: -moz-linear-gradient(top, rgba(0,0,0,0) 30%,rgba(0,0,0,0.7) 60%);
+            /* FF3.6-15 */
+            background: -webkit-linear-gradient(top, rgba(0,0,0,0) 30%,rgba(0,0,0,0.7) 60%);
+            /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom,  rgba(0,0,0,0) 30%,rgba(0,0,0,0.7) 60%);
+        }
+
+        .article-content {
+            padding: 250px 30px 30px;
+            @media (min-width: 60em) {
+                position: absolute;
+                padding : 0 15% 30px 30px;
+                bottom  : 0;
+            }
+            .post-date {
+                color      : #fff;
+                font-weight: bold;
+
+                a {
+                    color      : #fff;
+                    font-weight: bold;
+                }
+            }
+            .post-meta {
+                font-size: 1.4rem;
+
+
+
+                .category {
+                    a {
+                        color: $accent-color;
+                    }
+                }
+            }
+
+            h2 {
+                font-family: 'Oswald', sans-serif;
+                font-size  : 40px;
+                line-height: 45px;
+                padding-bottom: 7px;
+
+                a {
+                    color: #fff;
+                }
+            }
+
+            .excerpt {
+                color: #fff;
+                p {
+                    margin: 0;
+                    line-height: 1.4;
+                }
+            }
+        }
+    }
+}
+
+.article-column {
+    article {
+        margin-bottom: 20px;
+    }
+
+    article:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.nav-links {
+    padding-top: 30px;
+    .page-numbers {
+        font-size  : 14px;
+        min-width  : 35px;
+        display    : inline-block;
+        border     : 1px solid var(--grey-40-color);
+        color: var(--text-color);
+        line-height: 20px;
+        text-align : center;
+        font-weight: 700;
+        padding    : 10px;
+        box-sizing : border-box;
+    }
+    a.page-numbers {
+        color: var(--primary-color);
+    }
+}
+
+#single_article {
+    .jp-sharing-cont {
+        padding : 2em 2em 0;
+        position: sticky;
+        top     : 2em;
+    }
+
+    .article-image {
+        margin-bottom: 35px;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.author-information {
+    display: flex;
+
+    fl .gravatar {
+        flex          : 0 0 50px;
+        text-align    : center;
+        text-transform: capitalize;
+    }
+
+    .name {
+        flex        : 0 1 100%;
+        padding-left: 10px;
+        box-sizing  : border-box;
+    }
+}

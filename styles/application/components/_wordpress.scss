@@ -1,0 +1,303 @@
+$scroll-bar: 20px;
+
+:root {
+    --scroll-bar: 8px;
+}
+
+.screen-width--no-patch {
+    width : 100vw;
+    margin: 0 calc(-50vw + 50%);
+}
+
+.alignfull {
+    width : 100vw;
+    margin: 0 calc(-50vw + 50%);
+
+    .has-scrollbar & {
+        width : calc(100vw - #{$scroll-bar});
+        margin: 0 calc(-50vw + 50% + #{$scroll-bar / 2});
+    }
+
+    .mm-wrapper_opened.has-scrollbar & {
+        width : 100vw;
+        margin: 0 calc(-50vw + 50%);
+    }
+    @supports (color: var(--scroll-bar)) {
+        .has-scrollbar & {
+            width : calc(100vw - var(--scroll-bar));
+            margin: 0 calc(-50vw + 50% + (var(--scroll-bar) / 2));
+        }
+
+        .mm-wrapper_opened.has-scrollbar & {
+            width : 100vw;
+            margin: 0 calc(-50vw + 50%);
+        }
+    }
+}
+
+.alignwide {
+    width : 100vw;
+    margin: 0 calc(-50vw + 50%);
+    @media (max-width: 1400px) {
+        .has-scrollbar & {
+            width : calc(100vw - #{$scroll-bar});
+            margin: 0 calc(-50vw + 50% + #{$scroll-bar / 2});
+        }
+
+        .mm-wrapper_opened.has-scrollbar & {
+            width : 100vw;
+            margin: 0 calc(-50vw + 50%);
+        }
+        @supports (color: var(--scroll-bar)) {
+            .has-scrollbar & {
+                width : calc(100vw - var(--scroll-bar));
+                margin: 0 calc(-50vw + 50% + (var(--scroll-bar) / 2));
+            }
+
+            .mm-wrapper_opened.has-scrollbar & {
+                width : 100vw;
+                margin: 0 calc(-50vw + 50%);
+            }
+        }
+    }
+}
+@media (min-width: 1400px) {
+    .alignwide {
+        width    : auto;
+        max-width: 1950px;
+        margin   : 0 calc(25% - 25vw);
+    }
+}
+
+.alignfull.boxed {
+    @media (min-width: 1200px) {
+        width    : 92vw !important;
+        max-width: 92vw !important;
+        margin   : 0 calc(50% - 46vw) !important;
+    }
+}
+
+.alignfull.boxed.container {
+    padding: 0 16vw;
+}
+
+
+    .alignright {
+        float : right;
+        margin: 5px 0 20px 30px;
+    }
+
+    .alignnone {
+        margin: 5px 30px 20px 0;
+    }
+
+    .alignleft {
+        float : left;
+        margin: 5px 30px 20px 0;
+    }
+
+    .aligncenter {
+        display     : block;
+        margin-left : auto;
+        margin-right: auto;
+        text-align  : center;
+    }
+
+
+.resp-container {
+    position   : relative;
+    overflow   : hidden;
+    padding-top: 56.25%;
+
+    iframe {
+        position: absolute;
+        top     : 0;
+        left    : 0;
+        width   : 100%;
+        height  : 100%;
+        border  : 0;
+    }
+}
+
+.wp-caption {
+    background: #fff;
+    border    : 1px solid #f0f0f0;
+    max-width : 96%;
+    /* Image does not overflow the content area */
+    padding   : 5px 3px 10px;
+    text-align: center;
+}
+
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+    border   : 0 none;
+    height   : auto;
+    margin   : 0;
+    max-width: 98.5%;
+    padding  : 0;
+    width    : auto;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size  : 11px;
+    line-height: 17px;
+    margin     : 0;
+    padding    : 0 4px 5px;
+}
+/* Text meant only for screen readers. */
+.screen-reader-text {
+    border   : 0;
+    clip     : rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height   : 1px;
+    margin   : -1px;
+    overflow : hidden;
+    padding  : 0;
+    position : absolute !important;
+    width    : 1px;
+    word-wrap: normal !important;
+    /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+    background-color: #eee;
+    clip            : auto !important;
+    clip-path       : none;
+    color           : #444;
+    display         : block;
+    font-size       : 1em;
+    height          : auto;
+    left            : 5px;
+    line-height     : normal;
+    padding         : 15px 23px 14px;
+    text-decoration : none;
+    top             : 5px;
+    width           : auto;
+    z-index         : 100000;
+    /* Above WP toolbar. */
+}
+
+
+
+img {
+    max-width     : 100%;
+    height        : auto;
+    vertical-align: top;
+}
+
+figure.wp-block-image {
+    margin-bottom: 0;
+}
+
+.wp-block-image img {
+    margin-bottom : 0;
+    vertical-align: top;
+}
+
+.wp-block-group.has-background {
+    box-sizing: border-box;
+    padding   : 0;
+}
+
+.wp-block-cover,
+.wp-block-cover-image {
+    width    : auto !important;
+    min-width: 100%;
+}
+@media (min-width: 40em) {
+    .img-border figure {
+        position: relative;
+
+        &:before {
+            content         : '';
+            background-color: #b9c8da;
+            position        : absolute;
+            right           : -15px;
+            bottom          : -15px;
+            width           : 50%;
+            height          : 50%;
+            z-index         : -1;
+        }
+
+        &:hover {
+            &:before {
+                background-color: #142335;
+            }
+        }
+    }
+}
+
+.up-scale img {
+    @include transition(.5s, 0s);
+}
+
+.up-scale:hover img {
+    @include transform(scale(1.02));
+}
+/* Make sure media & text blocks always stack image, then text */
+@media screen and (max-width: 600px) {
+    .wp-block-media-text.is-stacked-on-mobile.has-media-on-the-right {
+        .wp-block-media-text__media {
+            grid-column: 1;
+            grid-row   : 1;
+        }
+
+        .wp-block-media-text__content {
+            grid-column: 1;
+            grid-row   : 2;
+        }
+    }
+}
+
+.wp-block-video {
+    video {
+        width: 100%;
+    }
+}
+
+ul.wp-block-social-links {
+    margin: 10px 0 !important;
+}
+
+.wp-block-file {
+    border   : 1px solid var(--grey-20-color);
+    padding  : 20px;
+    font-size: 1.4rem;
+    margin   : 10px 50px 20px 0;
+
+    a {
+        line-height: 2rem;
+        display    : inline-block;
+        color      : $text-color;
+        margin     : 0 0 5px !important;
+
+        &:last-child {
+            margin-bottom: 0 !important;
+        }
+    }
+}
+
+.wp-block-quote {
+    border-left : 5px solid $accent-color;
+    padding-left: 20px;
+
+    p {
+        font-size: 1.6rem;
+        font-weight: 700
+    }
+
+    cite {
+        font-size: 1.3rem;
+    }
+}

@@ -1,0 +1,198 @@
+@import 'framework.min';
+@import "~slick-carousel/slick/slick.css"; 
+@import "~slick-carousel/slick/slick-theme.css";
+@import 'mmenu.css';
+@import 'FontAwesome/css/all.css';
+@import 'sharebutton.css';
+@import 'nprogress.css';
+@import 'gravityform/basic.css';
+@import 'gravityform/theme.css';
+@import 'youtubefeed/css/sb-youtube.css';
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  border   : 0;
+  clip     : rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height   : 1px;
+  margin   : -1px;
+  overflow : hidden;
+  padding  : 0;
+  position : absolute !important;
+  width    : 1px;
+  word-wrap: normal !important;
+  /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+  background-color: #eee;
+  clip            : auto !important;
+  clip-path       : none;
+  color           : #444;
+  display         : block;
+  font-size       : 1em;
+  height          : auto;
+  left            : 5px;
+  line-height     : normal;
+  padding         : 15px 23px 14px;
+  text-decoration : none;
+  top             : 5px;
+  width           : auto;
+  z-index         : 100000;
+  /* Above WP toolbar. */
+}
+
+html.nprogress-busy body{
+  overflow:hidden !important;
+}
+
+/* breaking news slick bug fixed */
+.breaking-news .slick-vertical .slick-slide{
+  width:2000px !important;
+}
+
+i {
+  margin-left: 4px;
+  margin-right:4px;
+}
+
+.gform_footer input.gform_button, .gpoll_back_button {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  outline: none;
+  border: none;
+  font-size: 1.4rem !important;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.sby-owl-dot {
+  border:none;
+  background:transparent;
+  padding:0px;
+}
+
+.title-page{
+  font-family: 'Oswald', sans-serif!important;
+  font-size: 5.5rem!important;
+  line-height: 6rem!important;
+}
+.email-form input[type=submit] {
+
+  right: 0;
+  top: 0;
+  padding: 10px 15px;
+  border-radius: 0;
+  border: 1px solid #ccc;
+  text-transform: uppercase;
+  font-weight: 600;
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+.email-form input {
+  margin-bottom: 0 !important;
+}
+.email-form input[type=text] ,input[type=tel],input[type=email] {
+  padding: 10px 15px!important;;
+  border-radius: 0!important;;
+  border: 1px solid #ccc!important;;
+  width: 100%!important;;
+}
+
+.mc4wp-form-basic label, .mc4wp-form-basic input {
+  width: auto;
+  box-sizing: border-box;
+  cursor: auto;
+  height: auto;
+  vertical-align: baseline;
+  line-height: normal;
+  display: block;
+}
+
+.mc4wp-form-basic label {
+  margin-bottom: 6px;
+  font-weight: 700;
+  display: block;
+}
+
+body .is-layout-flex {
+  display: flex;
+}
+
+body .is-layout-flex {
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+body .is-layout-flex > * {
+  margin: 0;
+}
+
+.wp-block-columns{
+  align-items:normal !important;
+  box-sizing:border-box;
+  display:flex;
+  flex-wrap:wrap !important;
+  margin-bottom:1.75em;
+}
+@media (min-width:782px){
+  .wp-block-columns{
+    flex-wrap:nowrap !important;
+  }
+}
+.wp-block-columns.are-vertically-aligned-top{
+  align-items:flex-start;
+}
+.wp-block-columns.are-vertically-aligned-center{
+  align-items:center;
+}
+.wp-block-columns.are-vertically-aligned-bottom{
+  align-items:flex-end;
+}
+@media (max-width:781px){
+  .wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column{
+    flex-basis:100% !important;
+  }
+}
+@media (min-width:782px){
+  .wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column{
+    flex-basis:0;
+    flex-grow:1;
+  }
+  .wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column[style*=flex-basis]{
+    flex-grow:0;
+  }
+}
+.wp-block-columns.is-not-stacked-on-mobile{
+  flex-wrap:nowrap !important;
+}
+.wp-block-columns.is-not-stacked-on-mobile>.wp-block-column{
+  flex-basis:0;
+  flex-grow:1;
+}
+.wp-block-columns.is-not-stacked-on-mobile>.wp-block-column[style*=flex-basis]{
+  flex-grow:0;
+}
+
+:where(.wp-block-columns.has-background){
+  padding:1.25em 2.375em;
+}
+
+.wp-block-column{
+  flex-grow:1;
+  min-width:0;
+  overflow-wrap:break-word;
+  word-break:break-word;
+}
+
+.mc4wp-form-basic {
+  margin: 1em 0;
+}
+
+ol.has-background, ul.has-background {
+  padding: 1.25em 2.375em;
+}
+:where(.wp-block-columns.is-layout-flex){
+  gap: 2em;
+}

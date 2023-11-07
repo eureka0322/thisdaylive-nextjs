@@ -1,0 +1,7 @@
+@charset "UTF-8";
+@import './global/_font-import';
+@import './global/_variables';
+@import './global/_mixins';
+@import './global/_colors';
+@import './application/styles.scss';
+@import 'pagination.scss';

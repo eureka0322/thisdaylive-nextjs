@@ -1,0 +1,44 @@
+// main: ../../css/styles.scss
+
+.has-primary-background-color {
+    background-color: $primary-color !important;
+}
+
+.has-primary-color {
+    color: $primary-color !important;
+    & * {
+      color: $primary-color !important;
+    }
+}
+
+.has-secondary-background-color {
+    background-color: $secondary-color !important;
+}
+
+.has-secondary-color {
+    color: $secondary-color !important;
+}
+
+.has-black-background-color {
+    background-color: #000000 !important;
+}
+
+.has-black-color {
+    color: #000000 !important;
+}
+
+.has-white-background-color {
+    background-color: #ffffff !important;
+}
+
+.has-white-color {
+    color: #ffffff !important;
+}
+
+.has-grey-background-color {
+    background-color: #e8e8e8 !important;
+}
+
+.has-grey-color {
+    color: #e8e8e8 !important;
+}

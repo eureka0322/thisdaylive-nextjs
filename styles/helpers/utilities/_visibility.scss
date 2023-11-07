@@ -1,0 +1,98 @@
+// main: ../../../css/framework.scss
+//
+// Visibility utilities
+//
+
+.visible {
+    visibility: visible !important;
+}
+
+.invisible {
+    visibility: hidden !important;
+}
+@media print, screen and (max-width: 40em) {
+    .hide-for-xs-only {
+        display: none !important;
+    }
+}
+@media screen and (max-width: 0em), screen and (min-width: 40em) {
+    .show-for-xs-only {
+        display: none !important;
+    }
+}
+
+
+
+
+
+
+@media print, screen and (max-width: 60em) {
+    .hide-for-sm-down {
+        display: none !important;
+    }
+}
+@media print, screen and (min-width: 40em) {
+    .hide-for-sm-up {
+        display: none !important;
+    }
+}
+
+@media print, screen and (min-width: 40em) and (max-width: 60em) {
+    .hide-for-sm-only {
+        display: none !important;
+    }
+}
+@media screen and (max-width: 40em) {
+    .show-for-sm-up {
+        display: none !important;
+    }
+}
+@media screen and (max-width: 40em), screen and (min-width: 60em) {
+    .show-for-sm-only {
+        display: none !important;
+    }
+}
+
+
+
+
+
+
+@media print, screen and (max-width: 75em) {
+    .hide-for-md-down {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: 60em) {
+    .hide-for-md-up {
+        display: none !important;
+    }
+}
+
+@media print, screen and (min-width: 60em) and (max-width: 75em) {
+    .hide-for-md-only {
+        display: none !important;
+    }
+}
+@media screen and (max-width: 61.99875em), screen and (min-width: 75em) {
+    .show-for-md-only {
+        display: none !important;
+    }
+}
+
+
+
+
+
+
+@media print, screen and (min-width: 75em) {
+    .hide-for-lg-only {
+        display: none !important;
+    }
+}
+@media screen and (max-width: 75em) {
+    .show-for-lg-only {
+        display: none !important;
+    }
+}

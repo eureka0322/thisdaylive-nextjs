@@ -1,0 +1,86 @@
+// main: ../../css/framework.scss
+
+// Variables
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+$spacer: 1rem !default;
+$spacers: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge(
+  (
+    0: 0,
+    1: $spacer,
+    2: ($spacer * 2),
+    3: ($spacer * 3),
+    4: ($spacer * 4),
+    5: ($spacer * 5),
+    6: ($spacer * 6),
+    7: ($spacer * 7),
+    8: ($spacer * 8),
+    9: ($spacer * 9),
+    10: ($spacer * 10),
+    11: ($spacer * 11),
+    12: ($spacer * 12),
+    13: ($spacer * 13),
+    14: ($spacer * 14),
+    15: ($spacer * 15),
+    16: ($spacer * 16),
+    17: ($spacer * 17),
+    18: ($spacer * 18),
+    19: ($spacer * 19),
+    20: ($spacer * 20)
+  ),
+  $spacers
+);
+
+// This variable affects the `.h-*` and `.w-*` classes.
+$sizes: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$sizes: map-merge(
+  (
+    25: 25%,
+    50: 50%,
+    75: 75%,
+    100: 100%,
+    auto: auto
+  ),
+  $sizes
+);
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$grid-breakpoints: map-merge(
+  (
+
+    xs: 0em,
+    sm: 40em,
+    md: 60em,
+    lg: 75em
+  ),
+  $grid-breakpoints
+);
+
+//@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+//@include _assert-starts-at-zero($grid-breakpoints);
+
+// Fonts
+
+$font-weight-lighter:         lighter !default;
+$font-weight-light:           100 !default;
+$font-weight-normal:          400 !default;
+$font-weight-bold:            700 !default;
+$font-weight-bolder:          900 !default;
+
+// Utilities
+
+$displays: none, inline, inline-block, block, table, table-row, table-cell, flex, inline-flex !default;

@@ -1,0 +1,138 @@
+// main: ../../../css/styles.scss
+
+
+
+.mm-wrapper__blocker {
+    z-index: 9999;
+}
+
+.mm-menu {
+
+    --mm-listitem-size: 50px;
+
+    .mm-navbars_top {
+        //max-height : $mmenu_navbars_top_height;
+        //height     : $mmenu_navbars_top_height;
+        min-height : $mmenu_navbars_top_height;
+        line-height: $mmenu_navbars_top_height;
+
+        .mm-navbar {
+            border-bottom: 1px solid $primary-color !important;
+            max-height   : $mmenu_navbars_top_height;
+            height       : $mmenu_navbars_top_height;
+            min-height   : $mmenu_navbars_top_height;
+            line-height  : $mmenu_navbars_top_height;
+
+            .mm-btn,
+            .mm-btn_prev,
+            .mm-navbar__btn {
+                min-height: $mmenu_navbars_top_height;
+            }
+
+            .mm-navbar__btn {
+                background-color: $primary-color;
+
+                &:before {
+                    border-color: #fff;
+                }
+            }
+
+            .mm-navbar__title {
+                background-color: $mobile_menu_title_background_color;
+                color           : #fff;
+                font-weight     : 700;
+                text-transform  : uppercase;
+                font-size       : 1.2rem;
+                line-height     : $mmenu_navbars_top_height;
+                max-height      : $mmenu_navbars_top_height;
+                height          : $mmenu_navbars_top_height;
+                min-height      : $mmenu_navbars_top_height;
+            }
+
+            &.mm-navbar_tabs {
+                font-size  : 1.3rem;
+                font-weight: 600;
+
+                a {
+                    background-color: $primary-color;
+                    color           : rgb(255,255,255);
+
+                    &.mm-navbar__tab_selected {
+                        background-color: #fff;
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .mm-iconbar {
+        background-color: $secondary-color;
+        color           : rgba(255,255,255,.5);
+        font-size       : 16px;
+
+        .mm-iconbar__tab_selected {
+            color: rgba(255,255,255,1);
+        }
+    }
+
+    .mm-iconbar__bottom {
+        a {
+            display  : block;
+            font-size: 16px;
+        }
+    }
+
+    .mm-panel {
+        --mm-color-background: #fff;
+        background-color     : #fff;
+    }
+
+    .mm-panels {
+        .panel-menu {
+            background: #fff;
+        }
+
+        .title {
+            color      : $secondary-color;
+            font-weight: 700;
+        }
+
+        ul {
+            li {
+                font-size: 1.2rem;
+
+                a {
+                    color      : $secondary-color;
+                    font-family: $heading-font-family;
+                    font-size: 1.2rem;
+                    font-weight: 400;
+
+                    .mm-counter {
+                        color    : $secondary-color;
+                        font-size: 1.3rem;
+                        font-family: $heading-font-family;
+                    }
+
+                    &.mm-btn:after,
+                    &.mm-btn:before {
+                        border-width: 1px;
+                    }
+
+                    &.mm-btn_next:after,
+                    &.mm-btn_prev:before {
+                        width       : 5px;
+                        height      : 5px;
+                        border-color: $secondary-color;
+                    }
+                }
+
+                &.mm-listitem_selected {
+                    a {
+
+                    }
+                }
+            }
+        }
+    }
+}

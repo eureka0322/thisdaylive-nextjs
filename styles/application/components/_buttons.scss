@@ -1,0 +1,74 @@
+// main: ../../../css/styles.scss
+
+.button-block {
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+}
+
+.button {
+    background-color  : $primary-color;
+    padding           : 5px 20px !important;
+    color             : #fff !important;
+    font-size         : 1.5rem !important;
+    font-weight       : 500;
+    text-align        : center;
+    display           : inline-block;
+    box-sizing        : border-box;
+    outline           : none;
+    line-height       : 4rem;
+    cursor            : pointer !important;
+    font-family       : $heading-font-family;
+    @include transition(.2s, 0s);
+    border            : none;
+    -webkit-appearance: none !important;
+    border-radius: 0 !important;
+
+    &.white {
+        background-color: #fff;
+        color           : $primary-color !important;
+    }
+
+    &.outline {
+        border          : 1px solid $primary-color;
+        background-color: transparent;
+        color           : $primary-color;
+
+        &.white {
+            border          : 1px solid #fff;
+            background-color: transparent;
+            color           : #fff !important;
+        }
+    }
+
+    &.full-width {
+        width  : 100%;
+        display: block;
+    }
+}
+
+.wp-block-button__link {
+    padding           : 5px 20px !important;
+    display           : inline-block;
+    box-sizing        : border-box;
+    outline           : none;
+    line-height       : 4rem;
+    cursor            : pointer !important;
+    font-family       : $heading-font-family;
+    font-size         : 1.5rem !important;
+    font-weight       : 500;
+    text-align        : center;
+    border            : none;
+    -webkit-appearance: none !important;
+    border-radius: 0 !important;
+    @include transition(.2s, 0s);
+
+    &.outline {
+        border          : 1px solid $primary-color;
+    }
+
+    &.full-width {
+        width  : 100%;
+        display: block;
+    }
+}

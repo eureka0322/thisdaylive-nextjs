@@ -1,0 +1,38 @@
+
+.pagination-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    list-style-type: none !important;
+    padding: 0 5rem;
+    line-height: 36px !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    li {
+        margin-left:2px;
+        margin-right:2px;
+    }
+    li a {
+        padding: 10px;
+        border: gray 1px solid;
+        cursor: pointer;
+        color: var(--primary-color);
+    }
+    li.previous a,
+    li.next a,
+    li.break a {
+        border-color: transparent;
+    }
+    li.active a {
+        color: var(--text-color);
+        min-width: 32px;
+    }
+    li.disabled a {
+        color: grey;
+    }
+    li.disable,
+    li.disabled a {
+        cursor: default;
+    }
+}
+  

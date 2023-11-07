@@ -1,0 +1,188 @@
+// main: ../../../css/styles.scss
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family   : $heading-font-family;
+    font-weight   : $heading-font-weight;
+    line-height   : $heading-font-line-height;
+    color: $heading-color;
+    a {
+      color: inherit;
+    }
+}
+
+.h1 {
+
+    font-size: 3.5rem;
+}
+
+.h2 {
+    font-size: 3rem;
+}
+
+.h3 {
+    font-size: 2.5rem;
+}
+
+.h4 {
+    font-size: 2rem;
+}
+
+.h5 {
+    font-size: 1.8rem;
+}
+
+.h6 {
+    font-size: 1.5rem;
+}
+
+.paragraph-text {
+    font-family   : $base-font-family;
+    font-size     : $base-font-size;
+    line-height   : $base-font-line-height;
+    font-weight   : $base-font-weight;
+    letter-spacing: 0;
+    @media only screen and (min-width: 46rem) {
+        font-size  : $base-font-size;
+        line-height: $base-font-line-height;
+    }
+    @media only screen and (min-width: 61rem) {
+        font-size  : $base-font-size;
+        line-height: $base-font-line-height;
+    }
+}
+
+.italic {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.small {
+    font-size  : 80%;
+    line-height: 80%;
+}
+
+.block-margins {
+    margin: 1em 0;
+}
+
+.unordered-list {
+    list-style-type: disc;
+    list-style     : inside;
+}
+
+.ordered-list {
+    list-style: decimal;
+}
+
+.plain-list {
+    list-style: none !important;
+}
+
+.letter-spacing-4 {
+    letter-spacing: 4px;
+}
+
+.letter-spacing-8 {
+    letter-spacing: 8px;
+}
+
+.letter-spacing-12 {
+    letter-spacing: 12px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.typography {
+    .h1 > a,
+    h1 > a,
+    .h2 > a,
+    h2 > a,
+    .h3 > a,
+    h3 > a,
+    .h4 > a,
+    h4 > a,
+    .h5 > a,
+    h5 > a,
+    .h6 > a,
+    h6 > a,
+    .p a,
+    p a {
+      color: inherit;
+    }
+
+    b,
+    strong {
+        @extend .bold;
+    }
+
+    em {
+        font-style: italic;
+    }
+
+    h1 {
+        @extend .h1;
+        margin: 1rem 0 .5rem;
+    }
+
+    h2 {
+        @extend .h2;
+        margin: 1rem 0 .5rem;
+    }
+
+    h3 {
+        @extend .h3;
+        margin: 1rem 0 .5rem;
+    }
+
+    h4 {
+        @extend .h4;
+        margin: 1rem 0 .5rem;
+    }
+    .h5,
+    h5 {
+        @extend .h5;
+        margin: 1rem 0 .5rem;
+    }
+    .h6,
+    h6 {
+        @extend .h6;
+        margin: 1rem 0 .5rem;
+    }
+
+    address,
+    ol,
+    p,
+    ul {
+        @extend .paragraph-text;
+    }
+
+    ol,
+    p,
+    pre,
+    ul {
+        @extend .block-margins;
+    }
+
+    ul {
+        @extend .unordered-list;
+    }
+
+    ol {
+        @extend .ordered-list;
+    }
+
+    small {
+        @extend .small;
+    }
+
+}

@@ -1,0 +1,23 @@
+// main: ../../css/styles.scss
+@charset "UTF-8";
+@import '../global/font-import';
+@import "../global/variables";
+@import '../global/mixins';
+@import 'components/global';
+@import 'components/typography';
+//@import 'components/forms';
+@import 'components/wordpress';
+//@import 'components/buttons';
+@import 'components/masthead';
+@import 'components/mmenu';
+@import 'components/footer';
+//@import 'components/hero';
+//@import 'components/accordion';
+//@import 'components/slick_defaults';
+@import 'components/sidebar';
+@import 'components/blog';
+//@import 'components/reviews';
+//@import 'components/theme_blocks';
+@import 'components/theme_styles';
+//@import 'components/fancybox';
+@import '../global/colors';
